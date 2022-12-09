@@ -1,23 +1,8 @@
 const Authentication = (req, res, next) => {
     if (!req.session.admin) {
-        return res.redirect("/signin");
+        return res.redirect("/signIn");
     }
-    
     next();
-    
-};
-const Authentication1 = (req, res, next) => {
-    if (!req.session.user) {
-        return res.redirect("/signin");
-    }
-    
-    next();
-    
 };
 
-
-
-module.exports = {
-     Authentication,
-     Authentication1
- };
+module.exports = { Authentication };
